@@ -1,0 +1,221 @@
+<!-- About us section -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Custom Template</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .testimonials-container {
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        padding: 0px 200px;
+      }
+
+      .testimonial-parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .testimonial-parent:nth-child(even) {
+        text-align: left;
+        align-items: start;
+
+        /* width: 100%; */
+      }
+
+      .testimonial-parent:nth-child(odd) {
+        text-align: right;
+        align-items: end;
+      }
+
+      .testimonial {
+        width: 42%;
+      }
+
+      .view_more_button {
+        background: transparent;
+        border: none;
+        text-decoration: underline;
+        color: #000000;
+        font-size: 22px;
+        font-weight: 400;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+        font-family: "Poiret One", cursive;
+      }
+      .testimonial__name {
+        font-family: "Poiret One", cursive;
+        font-size: 40px;
+        font-weight: 400;
+      }
+      .testimonial__designation {
+        font-family: "Nourd", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .testimonial__content {
+        font-family: "Nourd", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      /* 1000 se chooti */
+      @media (max-width: 1000px) {
+        .testimonials-container {
+          padding: 0px 80px;
+        }
+        .testimonial {
+          width: 60%;
+        }
+      }
+      /* 768 se chooti */
+      @media (max-width: 640px) {
+        .testimonials-container {
+          padding: 0px 60px;
+        }
+        .testimonial {
+          width: 80%;
+        }
+      }
+
+      /* 640 se chooti */
+      @media (max-width: 640px) {
+        .testimonials-container {
+          padding: 0px 30px;
+        }
+        .testimonial {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testimonials-container">
+      <!-- Testimonials will be inserted here by JavaScript -->
+    </div>
+
+    <button class="view_more_button">VIEW MORE</button>
+
+    <script>
+      // Create an array of about section
+      const allAboutUsArray = [
+        {
+          id: 1,
+          name: "JESSICA DIXON",
+          designation: "DIRECTOR OF PRODUCT DEVELOPMENET & PRODUCTION SEE.MAS",
+          content:
+            "“Collaborative from onset with focus on client’s Brand needs and executing agreed deliverables at a very competitive cost with high-quality standards. Modern and easy to work with! I look forward to working with Snap 14 Agency in the future”.",
+        },
+        {
+          id: 2,
+          name: "KATTIE TROTTER",
+          designation: "FASHION DIRECTOR, VOGUE ARABIA",
+          content:
+            "“From the vast Sahara Desert to the stunning Red Sea coast, Egypt radiates beauty through a diverse tapestry of its people, cultural heritage, and captivating landscapes. We at Vogue are so impressed by your big hearts and determination to do the best job possible at Snap14, and want to thank every single one of you for your hard work and dedication”",
+        },
+        {
+          id: 3,
+          name: "RULA TAYARA",
+          designation:
+            "CREATIVE SOLUTIONS PROJECT MANAGER, HARPER’S BAZAAR ARABIA",
+          content:
+            "“The team at Snap14 were very hands-on and professional... the photo turned out to be one of the best from the issue”",
+        },
+        {
+          id: 4,
+          name: "JESSICA DIXON",
+          designation: "DIRECTOR OF PRODUCT DEVELOPMENET & PRODUCTION SEE.MAS",
+          content:
+            "“Collaborative from onset with focus on client’s Brand needs and executing agreed deliverables at a very competitive cost with high-quality standards. Modern and easy to work with! I look forward to working with Snap 14 Agency in the future”.",
+        },
+        {
+          id: 5,
+          name: "JESSICA DIXON",
+          designation: "DIRECTOR OF PRODUCT DEVELOPMENET & PRODUCTION SEE.MAS",
+          content:
+            "“Collaborative from onset with focus on client’s Brand needs and executing agreed deliverables at a very competitive cost with high-quality standards. Modern and easy to work with! I look forward to working with Snap 14 Agency in the future”.",
+        },
+        {
+          id: 6,
+          name: "JESSICA DIXON",
+          designation: "DIRECTOR OF PRODUCT DEVELOPMENET & PRODUCTION SEE.MAS",
+          content:
+            "“Collaborative from onset with focus on client’s Brand needs and executing agreed deliverables at a very competitive cost with high-quality standards. Modern and easy to work with! I look forward to working with Snap 14 Agency in the future”.",
+        },
+        {
+          id: 7,
+          name: "JESSICA DIXON",
+          designation: "DIRECTOR OF PRODUCT DEVELOPMENET & PRODUCTION SEE.MAS",
+          content:
+            "“Collaborative from onset with focus on client’s Brand needs and executing agreed deliverables at a very competitive cost with high-quality standards. Modern and easy to work with! I look forward to working with Snap 14 Agency in the future”.",
+        },
+        {
+          id: 8,
+          name: "JESSICA DIXON",
+          designation: "DIRECTOR OF PRODUCT DEVELOPMENET & PRODUCTION SEE.MAS",
+          content:
+            "“Collaborative from onset with focus on client’s Brand needs and executing agreed deliverables at a very competitive cost with high-quality standards. Modern and easy to work with! I look forward to working with Snap 14 Agency in the future”.",
+        },
+        {
+          id: 9,
+          name: "JESSICA DIXON",
+          designation: "DIRECTOR OF PRODUCT DEVELOPMENET & PRODUCTION SEE.MAS",
+          content:
+            "“Collaborative from onset with focus on client’s Brand needs and executing agreed deliverables at a very competitive cost with high-quality standards. Modern and easy to work with! I look forward to working with Snap 14 Agency in the future”.",
+        },
+        {
+          id: 10,
+          name: "JESSICA DIXON",
+          designation: "DIRECTOR OF PRODUCT DEVELOPMENET & PRODUCTION SEE.MAS",
+          content:
+            "“Collaborative from onset with focus on client’s Brand needs and executing agreed deliverables at a very competitive cost with high-quality standards. Modern and easy to work with! I look forward to working with Snap 14 Agency in the future”.",
+        },
+      ];
+
+      const testimonialsContainer = document.querySelector(
+        ".testimonials-container"
+      );
+      const viewMoreButton = document.querySelector(".view_more_button");
+
+      let showItem = 3;
+
+      function displayTestimonials() {
+        testimonialsContainer.innerHTML = "";
+        for (let i = 0; i < showItem && i < allAboutUsArray.length; i++) {
+          const testimonial = allAboutUsArray[i];
+          const testimonialParentElement = document.createElement("div");
+          const testimonialChildElement = document.createElement("div");
+
+          testimonialParentElement.classList.add("testimonial-parent");
+          testimonialChildElement.classList.add("testimonial");
+
+          testimonialChildElement.innerHTML = `
+                    <h3 class="testimonial__name">${testimonial.name}</h3>
+                    <strong class="testimonial__designation">${testimonial.designation}</strong>
+                    <p class="testimonial__content">${testimonial.content}</p>
+                `;
+          testimonialParentElement.appendChild(testimonialChildElement);
+          testimonialsContainer.appendChild(testimonialParentElement);
+        }
+      }
+
+      viewMoreButton.addEventListener("click", () => {
+        showItem += 2;
+        displayTestimonials();
+      });
+
+      // Initial display
+      displayTestimonials();
+    </script>
+  </body>
+</html>
