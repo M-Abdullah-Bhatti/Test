@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Custom Template</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .tabs-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+      }
+      .tab-btn {
+        width: 250px;
+        height: 250px;
+        font-size: 22px;
+        font-weight: 300;
+        color: #9b9b9b;
+        border: 1px solid #a7a7a7;
+        background-color: transparent;
+        font-family: "Nourd", sans-serif;
+      }
+      .tab-btn.active {
+        background: #f4eee6;
+        border: none;
+      }
+
+      section.tab-section-hide {
+        display: none !important;
+      }
+      section.tab-section-show {
+        display: flex !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs-container">
+      <button class="tab-btn" id="tab-1" onclick="tabOneClick()">ALL</button>
+      <button class="tab-btn" id="tab-2" onclick="tabTwoClick()">
+        EDITORIAL
+      </button>
+      <button class="tab-btn" id="tab-3" onclick="tabThreeClick()">
+        COMMERCIAL
+      </button>
+      <!-- New MOTION button -->
+      <button class="tab-btn" id="tab-4" onclick="tabFourClick()">
+        MOTION
+      </button>
+    </div>
+
+    <script>
+      function tabOneClick() {
+        $("button.tab-btn:nth-of-type(1)").addClass("active");
+        $("button.tab-btn:nth-of-type(2)").removeClass("active");
+        $("button.tab-btn:nth-of-type(3)").removeClass("active");
+        $("button.tab-btn:nth-of-type(4)").removeClass("active");
+
+        $('[data-section-id="65a6626c13cf3353c33425f8"]').addClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65a66e422694700fc489d93a"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65a66eafdba4871b3cbcdb5c"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65cb78ef40938203a1ed7d8e"]').removeClass(
+          "tab-section-show"
+        );
+        window.Squarespace.initializeLayoutBlocks(Y);
+      }
+
+      function tabTwoClick() {
+        $("button.tab-btn:nth-of-type(1)").removeClass("active");
+        $("button.tab-btn:nth-of-type(2)").addClass("active");
+        $("button.tab-btn:nth-of-type(3)").removeClass("active");
+        $("button.tab-btn:nth-of-type(4)").removeClass("active");
+
+        $('[data-section-id="65a6626c13cf3353c33425f8"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65a66e422694700fc489d93a"]').addClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65a66eafdba4871b3cbcdb5c"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65cb78ef40938203a1ed7d8e"]').removeClass(
+          "tab-section-show"
+        );
+        window.Squarespace.initializeLayoutBlocks(Y);
+      }
+
+      function tabThreeClick() {
+        $("button.tab-btn:nth-of-type(1)").removeClass("active");
+        $("button.tab-btn:nth-of-type(2)").removeClass("active");
+        $("button.tab-btn:nth-of-type(3)").addClass("active");
+        $("button.tab-btn:nth-of-type(4)").removeClass("active");
+
+        $('[data-section-id="65a6626c13cf3353c33425f8"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65a66e422694700fc489d93a"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65a66eafdba4871b3cbcdb5c"]').addClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65cb78ef40938203a1ed7d8e"]').removeClass(
+          "tab-section-show"
+        );
+        window.Squarespace.initializeLayoutBlocks(Y);
+      }
+
+      function tabFourClick() {
+        $("button.tab-btn:nth-of-type(1)").removeClass("active");
+        $("button.tab-btn:nth-of-type(2)").removeClass("active");
+        $("button.tab-btn:nth-of-type(3)").removeClass("active");
+        $("button.tab-btn:nth-of-type(4)").addClass("active");
+
+        // Adjust the visibility of sections for the MOTION tab
+        $('[data-section-id="65a6626c13cf3353c33425f8"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65a66e422694700fc489d93a"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65a66eafdba4871b3cbcdb5c"]').removeClass(
+          "tab-section-show"
+        );
+        $('[data-section-id="65cb78ef40938203a1ed7d8e"]').addClass(
+          "tab-section-show"
+        );
+        window.Squarespace.initializeLayoutBlocks(Y);
+      }
+
+      $(function () {
+        // Initialize all sections as hidden
+        $('[data-section-id="65a6626c13cf3353c33425f8"]').addClass(
+          "tab-section-hide"
+        );
+        $('[data-section-id="65a66e422694700fc489d93a"]').addClass(
+          "tab-section-hide"
+        );
+        $('[data-section-id="65a66eafdba4871b3cbcdb5c"]').addClass(
+          "tab-section-hide"
+        );
+        $('[data-section-id="65cb78ef40938203a1ed7d8e"]').addClass(
+          "tab-section-hide"
+        ); // Initialize the MOTION section as hidden
+        tabOneClick(); // Activate the first tab by default
+      });
+    </script>
+  </body>
+</html>
